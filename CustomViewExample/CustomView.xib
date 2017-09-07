@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="CustomViewExample" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="6kW-oc-Oag" id="wpu-3X-2eA"/>
+                <outlet property="slider" destination="tOP-PK-SXX" id="X9e-NU-7mD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="380"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kW-oc-Oag">
+                    <rect key="frame" x="0.0" y="359" width="425" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZS-jb-9ah">
+                    <rect key="frame" x="0.0" y="0.0" width="425" height="289"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <string key="text">This is a UITextView added to CustomView in its nib.
+ The content behind is rendered by CustomView.draw(rect:)  The label below is a UILabel, also added in the nib, with its content set from the storyboard via an IBInspectable</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-PK-SXX">
+                    <rect key="frame" x="-2" y="309" width="429" height="31"/>
+                    <connections>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="c00-97-5Q6"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6kW-oc-Oag" secondAttribute="bottom" id="01l-5e-hSv"/>
+                <constraint firstItem="OZS-jb-9ah" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="5Kg-R9-Vam"/>
+                <constraint firstItem="OZS-jb-9ah" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5g8-xb-3f8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tOP-PK-SXX" secondAttribute="trailing" id="APb-o1-9qZ"/>
+                <constraint firstItem="tOP-PK-SXX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K0m-92-BOo"/>
+                <constraint firstItem="tOP-PK-SXX" firstAttribute="top" secondItem="OZS-jb-9ah" secondAttribute="bottom" constant="20" id="Nxd-Lq-WA0"/>
+                <constraint firstItem="6kW-oc-Oag" firstAttribute="top" secondItem="tOP-PK-SXX" secondAttribute="bottom" constant="20" id="SQE-Jd-rFv"/>
+                <constraint firstItem="OZS-jb-9ah" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="aIw-AU-Enc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6kW-oc-Oag" secondAttribute="trailing" id="nAb-JN-NRL"/>
+                <constraint firstItem="6kW-oc-Oag" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vAW-Lo-9JE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-54.5" y="-609"/>
+        </view>
+    </objects>
+</document>
