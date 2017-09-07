@@ -23,8 +23,8 @@ extension NibBackedView where Self: UIView {
      You MUST call this method from your custom UIView's initialisers.
      init(coder:) is used when instantiating your view from another nib
      or a Storyboard. init(frame:) is used when instantiating your view
-     programatically. You can leave out the init() you're not going to
-     use if you like.
+     programatically, and also when Interface Builder renders custom
+     views, so you MUST implement them both.
 
      awakeFromNib() will be called on your view in all cases, so this is
      the best place to do your setup. The subviews and IBOutlets will be
