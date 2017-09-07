@@ -26,12 +26,17 @@ extension NibBackedView where Self: UIView {
      programatically, and also when Interface Builder renders custom
      views, so you MUST implement them both.
 
+     Marking your view class as @IBDesignable as usual will render the
+     draw(rect:) content as well as the subviews added from the nib.
+
      awakeFromNib() will be called on your view in all cases, so this is
      the best place to do your setup. The subviews and IBOutlets will be
      configured at the point that awakeFromNib() is called.
 
      This will load the UINib whose name matches your class name, from
-     the Bundle which belongs with your class.
+     the Bundle which belongs with your class. Its first object, which
+     must be a UIView, will be added to your (usually storyboard-created)
+     view as a subview.
      */
     public func addNibViewAsSubview() throws {
         let name = String(describing: Self.self)
